@@ -1,0 +1,37 @@
+.inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: var(--inner);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.inner-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 1230px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.wrapPage {
+    padding: 30px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapPage {
+        padding: 20px 0;
+    }
+
+    .inner-2 {
+        padding: 0;
+    }
+}

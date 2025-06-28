@@ -1,0 +1,228 @@
+
+.card {
+    position: relative;
+    width: calc(20% - 20px);
+    margin: 0 10px 20px 10px;
+    padding: 20px 20px;
+    border-radius: 8px;
+    background-color: #FFF;
+    border: 1px solid #e6e6e6;
+
+    &::after {
+        display: none;
+        position: absolute;
+        z-index: 11;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        background-color: rgba(0, 0, 0, 0.07);
+        content: '';
+    }
+
+    &.off {
+        &::after {
+            display: block;
+        }
+        
+        .btnModal {
+            pointer-events: none;
+        }
+        
+        .foot {
+            .content {
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.head {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.headTop {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: flex-end;
+}
+
+.editIcon {
+    position: absolute;
+    z-index: 12;
+    right: 20px;
+    top: 20px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    background: #00B2A9 url(/img/common/icon_edit.svg) no-repeat 50% 50%;
+    background-size: 20px auto;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.16);
+    transition: 0.2s background-color;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.teamIcon {
+    display: flex;
+
+    img {
+        display: block;
+        margin-left: 4px;
+    }
+}
+
+.avatar {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 65px;
+    min-width: 65px;
+    height: 65px;
+    margin-right: 18px;
+    border-radius: 100px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.infoMember {
+    width: calc(100% - 78px);
+
+    .name {
+        width: calc(100% - 70px);
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #212121;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .position {
+        width: calc(100% - 70px);
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #009ADB;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mail {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #003044;
+    }
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 41.5px;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: calc(100% - 44px);
+    }
+}
+
+.btnBox {
+    width: 38px;
+    min-width: 38px;
+    padding-top: 6px;
+
+    &.none {
+        pointer-events: none;
+    }
+}
+
+.btnOnOff {
+    position: relative;
+    z-index: 12;
+    width: 38px;
+    height: 23px;
+    background-color: #DBD216;
+    border-radius: 20px;
+    transition: 0.2s background-color;
+    caret-color: transparent;
+
+    &.none {
+        pointer-events: none;
+    }
+
+    &::after {
+        position: absolute;
+        top: 4px;
+        right: 5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        background-color: #FFF;
+        transition: 0.2s right;
+        content: '';
+    }
+
+    &.off {
+        background-color: #CFCFCF;
+
+        &::after {
+            right: 18px;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #e2d800;
+    }
+}
+
+@media (min-width: 1025px) {
+    .card:hover {
+        .editIcon {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    .editIcon:hover {
+        background-color: #009890;
+    }
+}
+
+@media (max-width: 1700px) {
+    .card {
+        width: calc(33.33% - 30px);
+    }
+}
+
+@media (max-width: 1380px) {
+    .card {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .card {
+        width: 100%;
+    }
+}

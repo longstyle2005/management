@@ -1,0 +1,36 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        position: relative;
+        margin-right: 10px;
+        font-size: 1.4rem;
+    }
+
+    a {
+        position: relative;
+        padding-right: 20px;
+        color: #808080;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::after {
+            position: absolute;
+            width: 6px;
+            height: 11px;
+            right: 0;
+            top: 4px;
+            background: url(/img/common/icon_arrow_3.svg) no-repeat;
+            background-position: 0 calc(50% - 1px);
+            background-size: 6px auto;
+            content: "";
+        }
+    }
+
+    span {
+        color: #808080;
+    }
+}

@@ -1,0 +1,33 @@
+.filterTitle {
+    position: relative;
+    font-size: 1.4rem;
+    color: #8f8f8f;
+    font-weight: 400;
+
+    &.icon {
+        padding-right: 8px;
+        cursor: pointer;
+        caret-color: transparent;
+
+        &::after {
+            position: absolute;
+            right: 0;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            background: url(/img/common/icon_filter_2.svg) no-repeat 0 0;
+            background-size: 4px auto;
+            content: '';
+        }
+    }
+
+    &.active {
+        color: #0F9FDD;
+
+        &.icon {
+            &::after {
+                background-image: url(/img/common/icon_filter_3.svg);
+            }
+        }
+    }
+}

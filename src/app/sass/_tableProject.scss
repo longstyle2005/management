@@ -1,0 +1,199 @@
+.tableProject {
+    width: 100%;
+    border-collapse: collapse;
+	table-layout: fixed;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    overflow: hidden;
+
+    thead {
+        th {
+            font-weight: 500;
+            line-height: 1.4;
+        }
+    }
+
+    tbody {
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        tr:nth-child(odd) {
+            background-color: #fbfbfb;
+        }
+
+        tr:last-child {
+            background-color: transparent;
+        }
+    }
+
+    th,td {
+        padding: 16px 20px;
+    }
+
+    th {
+        min-width: fit-content;
+    }
+
+    td {
+       
+    }
+
+    .w1 {
+        width: 50px;
+    }
+
+    .w2 {
+        width: 100px;
+    }
+
+    .w3 {
+        width: 150px;
+    }
+
+    .w4 {
+        width: 200px;
+    }
+
+    .w5 {
+        width: 250px;
+    }
+
+    .w6 {
+        width: 300px;
+    }
+
+    .w7 {
+        width: 350px;
+    }
+
+    .w8 {
+        width: 400px;
+    }
+
+    .w9 {
+        width: 450px;
+    }
+
+    .w10 {
+        width: 500px;
+    }
+
+    .proName {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+        }
+
+        .name {
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+    }
+
+    .framework {
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+
+            .frameworkList {
+                pointer-events: all;
+                opacity: 1;
+            }
+        }
+    }
+
+    .frameworkList {
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        top: 100%;
+        display: flex;
+        width: max-content;
+        padding: 6px 10px;
+        background-color: #505050;
+        border-radius: 4px;
+        transition: 0.2s opacity;
+        opacity: 0;
+        pointer-events: none;
+
+        li {
+            color: #FFF;
+            font-size: 1.4rem;
+            line-height: 1.5;
+
+            & > span {
+                margin: 0 6px 0 4px;
+            }
+        }
+    }
+
+    .status {
+        display: flex;
+        align-items: center;
+        padding-right: 50px;
+
+        .bar {
+            position: relative;
+            width: 200px;
+            height: 13px;
+            border: 1px solid;
+
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                background-color: #FFF;  
+            }
+
+            &[data-situation="situation_02"] {
+                border-color: var(--color-in-progress);
+
+                span {
+                    background-color:  var(--color-in-progress); 
+                }
+            }
+
+            &[data-situation="situation_03"] {
+                border-color: var(--color-urgent);
+
+                span {
+                    background-color:  var(--color-urgent); 
+                }
+            }
+
+            &[data-situation="situation_04"] {
+                border-color: var(--color-deploying);
+
+                span {
+                    background-color: var(--color-deploying); 
+                }
+            }
+        }
+
+        .percent {
+            display: flex;
+            align-items: center;
+            margin-left: 8px;
+            font-size: 1.3rem;
+            line-height: 1;
+
+            span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .areaContent {
+        white-space: pre-line;
+    }
+}
+

@@ -1,0 +1,9 @@
+.wrapPage {
+    padding: 80px 40px;
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapPage {
+        padding: 20px 0;
+    }
+}

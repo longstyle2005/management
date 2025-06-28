@@ -1,0 +1,61 @@
+.manager {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &Item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 110px;
+
+        &:hover {
+            cursor: pointer;
+            
+            .managerNickname {
+                display: block;
+            }
+        }
+    }
+
+    &Avatar {
+        display: inline-block;
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        margin-bottom: 5px;
+        border-radius: 50px;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &Title {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    &Nickname {
+        display: none;
+        position: absolute;
+        left: 50%;
+        bottom: -9px;
+        min-width: 83px;
+        width: fit-content;
+        padding: 4px 8px;
+        font-size: 1.3rem;
+        transform: translateX(-50%);
+        background-color: #505050;
+        border-radius: 4px;
+        color: #FFF;
+        text-align: center;
+        white-space: nowrap;
+    }
+}

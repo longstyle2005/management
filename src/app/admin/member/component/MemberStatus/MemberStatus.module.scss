@@ -1,0 +1,126 @@
+$url-arrow-1: url(/img/common/icon_polygon_1.svg);
+$url-arrow-2: url(/img/common/icon_polygon_2.svg);
+
+.status {
+    position: relative;
+    width: 100%;
+    margin-top: 1px;
+    caret-color: transparent;
+}
+
+.bar {
+    position: relative;
+    border-radius: 10px;
+    height: 14px;
+    width: calc(100% - 20px);
+    cursor: pointer;
+
+    &.none {
+        pointer-events: none;
+    }
+
+    &::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #FFDEDE;
+        content: '';
+    }
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 0;
+        border-radius: 10px;
+        background-color: #DB1636;
+        content: '';
+    }
+
+    &[data-status="0"] {
+        &::after {
+            width: 0;
+        }
+    }
+
+    &[data-status="1"] {
+        &::after {
+            width: 20%;
+            background-color: #ff8181;
+        }
+    }
+
+    &[data-status="2"] {
+        &::after {
+            width: 40%;
+            background-color: #ff7676;
+        }
+    }
+
+    &[data-status="3"] {
+        &::after {
+            width: 60%;
+            background-color: #ff6b6b;
+        }
+    }
+
+    &[data-status="4"] {
+        &::after {
+            width: 80%;
+            background-color: #ff5c5c;
+        }
+    }
+
+    &[data-status="5"] {
+        &::after {
+            width: 100%;
+            background-color: #FF5252;
+        }
+    }
+}
+
+.list {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: calc(100% + 1px);
+    left: 0;
+    width: calc(100% - 20px);
+    border-radius: 4px;
+    background-color: #FFF;
+    border: 1px solid #e7e7e7;
+    overflow: hidden;
+
+    & > li {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: calc(100% / 6);
+        padding: 6px 6px;
+        border-right: 1px solid #e7e7e7;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        font-weight: 500;
+        color: #003044;
+        text-align: center;
+        transition: 0.2s background-color;
+
+        &:last-child {
+            border-right: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #fff5f5;
+        }
+
+        &.active {
+            pointer-events: none;
+            background-color: #fff5f5;
+        }
+    }
+}

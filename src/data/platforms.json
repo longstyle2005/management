@@ -1,0 +1,27 @@
+[
+    {
+        "id": "platforms_01",
+        "name": "CB Framework"
+    },
+    {
+        "id": "platforms_02",
+        "name": "Laravel"
+    },
+    {
+        "id": "platforms_03",
+        "name": "Wordpress"
+    },
+    {
+        "id": "platforms_04",
+        "name": "React"
+    },
+    {
+        "id": "platforms_05",
+        "name": "React Native"
+    },
+    {
+        "id": "platforms_06",
+        "name": "Vue.js"
+    }
+]
+  

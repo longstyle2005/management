@@ -1,0 +1,157 @@
+
+.tableMember {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+	table-layout: fixed;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+
+    thead {
+
+    }
+
+    tbody {
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        // tr:nth-child(odd) {
+        //     background: #fbfbfb;
+        // }
+    }
+
+    tr {
+
+    }
+
+    th {
+        padding: 10px 0;
+
+    }
+
+    td {
+        padding: 10px 0;
+
+    }
+
+    .numberCol {
+        width: 8%;
+    }
+
+    .nicknameCol {
+        width: 34%;
+    }
+
+    .statusCol {
+        width: 40%;
+    }
+
+    .projectCol {
+        width: 18%;
+        text-align: right;
+        padding-right: 0;
+    }
+
+    .number {
+    
+    }
+
+    .nickname {
+        display: flex;
+        align-items: center;
+
+        &.off {
+            opacity: 0.3;
+        }
+
+        .avatar {
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+            border-radius: 32px;
+        }
+
+        .name {
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+    }
+
+    .status {
+        display: flex;
+        align-items: center;
+
+        .bar {
+            position: relative;
+            width: 200px;
+            height: 13px;
+            border: 1px solid #00A29A;
+
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                background-color: #00A29A;  
+
+                &[data-status="0"] {
+                    width: 0%;
+                }
+
+                &[data-status="1"] {
+                    width: 20%;
+                }
+
+                &[data-status="2"] {
+                    width: 40%;
+                }
+
+                &[data-status="3"] {
+                    width: 60%;
+                }
+
+                &[data-status="4"] {
+                    width: 80%;
+                }
+
+                &[data-status="5"] {
+                    width: 100%;
+                }
+            }
+        }
+
+        .percent {
+            display: flex;
+            align-items: center;
+            margin-left: 8px;
+            font-size: 1.3rem;
+            line-height: 1;
+
+            span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .statusOff {
+        display: flex;
+
+        span {
+            width: 8px;
+            height: 1px;
+            margin-right: 5px;
+            background-color: #d9d9d9;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .projects {
+        text-align: right;
+    }
+}

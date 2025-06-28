@@ -1,0 +1,19 @@
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.svg {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    display: inline-block;
+}

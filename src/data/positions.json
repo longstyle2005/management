@@ -1,0 +1,19 @@
+[
+    {
+        "id": "position_01",
+        "name": "Admin"
+    },
+    {
+        "id": "position_02",
+        "name": "Manager"
+    },
+    {
+        "id": "position_03",
+        "name": "Leader"
+    },
+    {
+        "id": "position_04",
+        "name": "Member"
+    }
+]
+  

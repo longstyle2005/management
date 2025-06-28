@@ -1,0 +1,42 @@
+.wrapFilter {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+
+    .btnAdd {
+        margin-left: 20px;
+    }
+}
+
+.filter {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.search {
+    width: 21%;
+}
+
+@media screen and (max-width: 1200px) {
+    .filter {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapFilter {
+        flex-direction: column;
+        margin-right: 0;
+        width: 100%;
+
+        .btnAdd {
+            margin: 15px auto 0;
+        }
+    }
+
+    .filter {
+        gap: 0;
+        justify-content: space-between;
+    }
+}

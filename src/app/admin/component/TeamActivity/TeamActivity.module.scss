@@ -1,0 +1,108 @@
+.wrap {
+   
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .team {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.team {
+    display: flex;
+    align-items: center;
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        padding-right: 20px;
+        text-align: right;
+    }
+
+    .ttl1 {
+        margin-bottom: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    .ttl2 {
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-style: italic;
+    }
+}
+
+.barList {
+    width: 900px;
+
+    & > li {
+        position: relative;
+        display: inline-block;
+        display: flex;
+        height: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .bar {
+        background-color: #00A29A;
+    }
+
+    .percent {
+        position: absolute;
+        right: -45px;
+        top: 0;
+        width: 45px;
+        padding-left: 6px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #6E6E6E;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .list {
+        margin-bottom: 20px;
+
+        .team {
+            margin-bottom: 15px;
+        }
+    }
+
+    .team {
+        .head {
+            width: 80px;
+            padding-right: 10px;
+        }
+
+        .ttl1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .barList {
+        width: calc(100% - 120px);
+
+        & > li {
+            height: 16px;
+        }
+
+        .percent {
+            top: -2px;
+            padding-left: 5px;
+            font-size: 1.4rem;
+        }
+    }
+}

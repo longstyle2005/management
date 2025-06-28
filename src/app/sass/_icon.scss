@@ -1,0 +1,25 @@
+.iconEdit {
+    width: 30px;
+    height: 30px;
+    background: url(/img/common/icon_edit_1.svg) no-repeat 50% 50%;
+    background-size: 30px auto;
+    transition: 0.2s opacity;
+}
+
+.iconDelete {
+    width: 30px;
+    height: 30px;
+    background: url(/img/common/icon_delete_1.svg) no-repeat 50% 50%;
+    background-size: 30px auto;
+    transition: 0.2s opacity;
+}
+
+@media screen and (min-width: 1025px) {
+    .iconEdit:hover {
+       opacity: 0.8;
+    }
+
+    .iconDelete:hover {
+        opacity: 0.8;
+    }
+}

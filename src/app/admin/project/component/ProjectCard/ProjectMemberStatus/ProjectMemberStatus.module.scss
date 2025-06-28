@@ -1,0 +1,111 @@
+.wrap {
+    position: relative;
+    width: 600px;
+    max-height: 480px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #FFF;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+}
+
+.btnClose {
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background: #FFF url(/img/common/icon_x.svg) no-repeat 50% 50%;
+    background-size: 20px auto;
+    transition: 0.2s background-color;
+    cursor: pointer;
+}
+
+.title {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #212121;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.content {
+    display: flex;
+
+    .col1 {
+        width: 35%;
+        padding-right: 30px;
+    }
+
+    .col2 {
+        width: 65%;
+        border: 1px solid #F2F2F2;
+    }
+}
+
+.listPosition {
+    .item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        cursor: pointer;
+        caret-color: transparent;
+
+        &::after {
+            position: absolute;
+            z-index: 0;
+            left: -10px;
+            right: -10px;
+            top: 0;
+            bottom: 0;
+            border-radius: 5px;
+            background-color: #f7f7f7;
+            opacity: 0;
+            transition: 0.2s opacity;
+            content: '';
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.active {
+            .ttl {
+                font-weight: 700;
+            }
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .ttl {
+        position: relative;
+        z-index: 1;
+        padding-right: 15px;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #212121;
+    }
+
+    .num {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        padding: 3px 2px 2px;
+        background-color: #E3E3E3;
+        border-radius: 24px;
+        font-size: 1.4rem;
+        font-family: Arial, sans-serif;
+        line-height: 1;
+    }
+}

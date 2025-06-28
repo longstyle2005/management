@@ -1,0 +1,13 @@
+.loadingBox {
+    position: absolute;
+    z-index: 9999;
+    top: calc(50% - 120px);
+    left: calc(50% - 120px);
+
+    .svg {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        display: inline-block;
+    }
+}

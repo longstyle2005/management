@@ -1,0 +1,30 @@
+[
+    {
+        "id": "situation_01",
+        "name": "Open"
+    },
+    {
+        "id": "situation_02",
+        "name": "In Progress"
+    },
+    {
+        "id": "situation_03",
+        "name": "Urgent"
+    },
+    {
+        "id": "situation_04",
+        "name": "Deploying"
+    },
+    {
+        "id": "situation_05",
+        "name": "Releasing"
+    },
+    {
+        "id": "situation_06",
+        "name": "Close"
+    },
+    {
+        "id": "situation_07",
+        "name": "Stop"
+    }
+]

@@ -1,0 +1,31 @@
+[
+    {
+        "id": "team_01",
+        "name": "Backend",
+        "icon": "/img/team/icon_squid.svg",
+        "status_next_week": "100",
+        "status_next_month": "90"
+    },
+    {
+        "id": "team_02",
+        "name": "Frontend",
+        "icon": "/img/team/icon_starfish.svg",
+        "status_next_week": "90",
+        "status_next_month": "90"
+    },
+    {
+        "id": "team_03",
+        "name": "Tester",
+        "icon": "/img/team/icon_dolphin.svg",
+        "status_next_week": "80",
+        "status_next_month": "90"
+    },
+    {
+        "id": "team_04",
+        "name": "ITC",
+        "icon": "/img/team/icon_pigeon.svg",
+        "status_next_week": "90",
+        "status_next_month": "100"
+    }
+]
+  
