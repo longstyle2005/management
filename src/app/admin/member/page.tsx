@@ -123,7 +123,7 @@ export default function MemberPage () {
   	return (
 		<DefaultLayout>
 			{isLoading && <LoadingFullPage />}
-			<HeadPage title='Members'>
+			<HeadPage title='Members' customClass=''>
 				<div className={styles.wrapFilter}>
 					<div className={styles.filter}>
 						<MemberFilterKeyword 

@@ -114,7 +114,7 @@ export default function ProjectPage () {
   	return (
 		<DefaultLayout>
 			{isLoading && <LoadingFullPage />}
-			<HeadPage title='Projects'>
+			<HeadPage title='Projects' customClass=''>
 				<div className={styles.wrapFilter}>
 					<div className={styles.filter}>
 						<ProjectFilterKeyword 
