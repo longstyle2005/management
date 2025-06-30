@@ -60,3 +60,9 @@
         background-color: #ebebeb;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .modal {
+        width: calc(100% - 30px);
+    }
+}

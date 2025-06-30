@@ -189,11 +189,6 @@
             right: 18px;
         }
     }
-
-    &:hover {
-        cursor: pointer;
-        background-color: #e2d800;
-    }
 }
 
 @media (min-width: 1025px) {
@@ -206,6 +201,11 @@
 
     .editIcon:hover {
         background-color: #009890;
+    }
+
+    .btnOnOff:hover {
+        cursor: pointer;
+        background-color: #e2d800;
     }
 }
 
@@ -221,7 +221,7 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .card {
         width: 100%;
     }
