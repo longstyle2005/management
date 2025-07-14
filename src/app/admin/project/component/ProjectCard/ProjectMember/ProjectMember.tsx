@@ -59,7 +59,7 @@ export default function ProjectMember (
   	return (
 		<div className={styles.member}>
             <div className={styles.memberHead}>
-                <p className={styles.memberTitle}>Thành viên:</p>
+                <p className={styles.memberTitle}>Members :</p>
                 <p className={styles.memberNum}>{memberDataList.length}</p>
             </div>
             <div className={styles.memberContent}>
