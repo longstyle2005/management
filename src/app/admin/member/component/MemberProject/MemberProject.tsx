@@ -38,7 +38,7 @@ export default function MemberProject (
 			getOptionValue={(option : any) => option.projectId.toString()}
 			value={projectCurrentDataOfMember}
 			onChange={handleSelectProject}
-			placeholder="Chọn dự án"
+			placeholder="Please select a project"
 			menuPlacement="auto" 
 			menuShouldScrollIntoView={true}
 			// menuIsOpen={true} // Debug menu open
