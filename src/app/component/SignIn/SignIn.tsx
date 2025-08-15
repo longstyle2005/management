@@ -6,6 +6,8 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { usePathname } from 'next/navigation';
 import LoadingFullPage from '~/app/component/LoadingFullPage/LoadingFullPage';
 import { useSearchParams, useRouter } from "next/navigation";
+import { signInSchema } from "~/app/utils/validation/signInSchema";
+
 import Link from "next/link";
 
 export default function SignIn ( 
@@ -72,6 +74,7 @@ export default function SignIn (
 				</label>
 				<label className={`${styles.inputField} ${styles.password}`} htmlFor="password">
 					<input id="password" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
+					<span className={styles.eye}></span>
 				</label>
 				<button className={styles.btnLogin} type="submit">Sign in</button>
 			</form>
