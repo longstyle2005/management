@@ -1,6 +1,7 @@
 "use client";
 import styles from './page.module.scss'
 import Image from 'next/image';
+import SignIn from '~/app/component/SignIn/SignIn';
 export default function HomePage({
     
 }: {
@@ -9,7 +10,10 @@ export default function HomePage({
     return (
         <div className={styles.wrap}>
             <div className={styles.col1}>
-                <p className={styles.ttl}>Sign in</p>
+                <div className={styles.signInBox}>
+                    <p className={styles.ttl}>Sign in</p>
+                    <SignIn />
+                </div>
                 
                 
             </div>

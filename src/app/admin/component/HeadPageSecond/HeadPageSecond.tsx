@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import Account from '~/app/component/Account/Account'
+import Account from '~/app/component/SignIn/SignIn'
 import styles from './HeadPageSecond.module.scss'
 
 export default function HeadPageSecond ( 

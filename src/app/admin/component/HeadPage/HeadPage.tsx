@@ -1,6 +1,5 @@
 'use client'
 import { ReactNode, Suspense } from 'react'
-import Account from '~/app/component/Account/Account'
 import styles from './HeadPage.module.scss'
 
 export default function HeadPage ( 
@@ -22,7 +21,7 @@ export default function HeadPage (
 			<div className={styles.headRight}>
 				{children}
 				<Suspense>
-					<Account />
+					{/* <Account /> */}
 				</Suspense>
 			</div>
 		</div>
