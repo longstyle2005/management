@@ -1,6 +1,7 @@
 'use client'
 import { ReactNode, Suspense } from 'react'
 import styles from './HeadPage.module.scss'
+import SignOut from '~/app/admin/component/SignOut/SignOut'
 
 export default function HeadPage ( 
 	{
@@ -21,7 +22,7 @@ export default function HeadPage (
 			<div className={styles.headRight}>
 				{children}
 				<Suspense>
-					{/* <Account /> */}
+					<SignOut />
 				</Suspense>
 			</div>
 		</div>

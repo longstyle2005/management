@@ -7,8 +7,8 @@ export default function NotFound() {
 			<div className='content'>
                 <div className='block'>
                     <p className='ttl'>404!</p>
-                    <p className='txt'>Trang không tồn tại</p>
-                    <Link className='link' href="/">Trở về trang chủ</Link>
+                    <p className='txt'>Page not found!!!</p>
+                    <Link className='link' href="/admin">Return to Home</Link>
                 </div>
                 <figure className='image'>
                     <Image width={0} height={0} alt='' src="/img/common/icon_face_1.svg" />

@@ -1,23 +1,11 @@
 import styles from './SignIn.module.scss'
 import { useState } from 'react';
 import { signIn } from "next-auth/react";
-import { usePathname } from 'next/navigation';
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { LoginForm } from '~/app/utils/interfaces/login_form.interface';
 
-export default function SignIn ( 
-	{ } : 
-	{ }
-) {
-	const router = useRouter();
-	const pathname = usePathname();
-
-	let isNotAdmin = null;
-	if (pathname) {
-		isNotAdmin = !pathname.startsWith('/admin');
-	}
-
+export default function SignIn () {
 	const {
 		register,
 		handleSubmit,
@@ -25,7 +13,7 @@ export default function SignIn (
 		watch, 
 		formState: { errors },
 	} = useForm<LoginForm>();
-
+	const router = useRouter();
 	const [showPassword, setShowPassword] = useState<boolean>(false);
   	const passwordValue = watch("password");
 
