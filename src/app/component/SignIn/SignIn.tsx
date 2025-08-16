@@ -1,4 +1,5 @@
 import styles from './SignIn.module.scss'
+import { useState } from 'react';
 import { signIn } from "next-auth/react";
 import { usePathname } from 'next/navigation';
 import { useRouter } from "next/navigation";
@@ -21,8 +22,12 @@ export default function SignIn (
 		register,
 		handleSubmit,
 		setError,
+		watch, 
 		formState: { errors },
 	} = useForm<LoginForm>();
+
+	const [showPassword, setShowPassword] = useState<boolean>(false);
+  	const passwordValue = watch("password");
 
 	const onSubmit = async (data: LoginForm) => {
 		const res = await signIn("credentials", {
@@ -52,13 +57,14 @@ export default function SignIn (
 				<div className='mb-[15px]'>
 					<label className={`${styles.inputField} ${styles.password} ${errors.password && styles.error}`} htmlFor="password">
 						<input
-							id="password" placeholder="Password" type="password"
+							id="password" placeholder="Password" 
+							type={showPassword ? "text" : "password"}
 							{...register("password", {
 								required: "Password is required",
 								minLength: { value: 6, message: "Min 6 characters" },
 							})}
 						/>
-						<span className={styles.eye}></span>
+						{passwordValue && <span className={`${styles.eye} ${!showPassword && styles.active}`} onClick={() => setShowPassword(!showPassword)}></span>}
 					</label>
 					{errors.password && <p className='txtError show'>{errors.password.message}</p>}
 				</div>

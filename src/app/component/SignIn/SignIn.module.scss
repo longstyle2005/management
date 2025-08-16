@@ -24,6 +24,10 @@
     &:hover {
         background-color: #263136;
     }
+
+    &:active {
+        background-color: #0f1518;
+    }
 }
 
 .info {
@@ -103,17 +107,18 @@
         .eye {
             position: absolute;
             right: 10px;
-            top: 5px;
+            top: 7px;
             width: 30px;
             height: 30px;
             background-repeat: no-repeat;
             background-position: 50% 50%;
             background-image: url(/img/common/icon_eye.svg);
-            background-size: 18px auto;
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.2s opacity, 0.2s visible;
+            background-size: 21px auto;
             cursor: pointer;
+
+            &.active {
+                background-image: url(/img/common/icon_eye_off.svg);
+            }
         }
     }
 
