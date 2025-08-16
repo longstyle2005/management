@@ -14,8 +14,6 @@ export default function HomePage({
                     <p className={styles.ttl}>Sign in</p>
                     <SignIn />
                 </div>
-                
-                
             </div>
             <div className={styles.col2}>
                 <div className={styles.intro}>

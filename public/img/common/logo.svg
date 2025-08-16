@@ -1,3 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="104.651" height="104.652" viewBox="0 0 104.651 104.652">
-  <rect id="Rectangle_323" data-name="Rectangle 323" width="74" height="74" transform="translate(52.326) rotate(45)" fill="#0092d9"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="104.652" height="104.652" viewBox="0 0 104.652 104.652">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#36bdff"/>
+      <stop offset="1" stop-color="#09f"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-244.659 -1008.795) rotate(45)">
+    <rect id="Rectangle_323" data-name="Rectangle 323" width="74" height="74" transform="translate(997.326 503.326) rotate(90)" fill="#0092d9"/>
+    <rect id="Rectangle_323-2" data-name="Rectangle 323" width="37" height="37" transform="translate(960.326 503.326) rotate(90)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_323-3" data-name="Rectangle 323" width="37" height="37" transform="translate(997.326 540.326) rotate(90)" fill="url(#linear-gradient)"/>
+  </g>
 </svg>

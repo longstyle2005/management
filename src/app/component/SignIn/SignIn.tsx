@@ -1,11 +1,8 @@
-'use client'
-
 import styles from './SignIn.module.scss'
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { usePathname } from 'next/navigation';
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import Link from "next/link";
 import { LoginForm } from '~/app/utils/interfaces/login_form.interface';
 
 export default function SignIn ( 
@@ -30,9 +27,8 @@ export default function SignIn (
 	const onSubmit = async (data: LoginForm) => {
 		const res = await signIn("credentials", {
 			email: data.email,
-			password: data.email,
+			password: data.password,
 			redirect: false,
-			callbackUrl: "/admin",
 		});
 		if (res?.error) {
 			setError("root", { message: "Invalid email or password" });
@@ -43,30 +39,30 @@ export default function SignIn (
 
   	return (
 		<div className={styles.blockLogin}>
-			<form className={styles.formBtn} onSubmit={handleSubmit(onSubmit)}>
-				<label className={`${styles.inputField} ${styles.email}`} htmlFor="email">
-					<input
-						id="email" type="email" placeholder="Email"
-						// register: gắn input này vào react-hook-form + rule validate
-						{...register("email", { required: "Email is required" })}
-					/>
-				</label>
-				{errors.email && <p>{errors.email.message}</p>}
-
-				<label className={`${styles.inputField} ${styles.password}`} htmlFor="password">
-					<input
-						id="password" placeholder="Password" type="password"
-						{...register("password", {
-							required: "Password is required",
-							minLength: { value: 6, message: "Min 6 characters" },
-						})}
-					/>
-					<span className={styles.eye}></span>
-				</label>
-				{errors.password && <p>{errors.password.message}</p>}
-
-
-				{errors.root && <p>{errors.root.message}</p>}
+			<form className='w-full' onSubmit={handleSubmit(onSubmit)}>
+				<div className='mb-[15px]'>
+					<label className={`${styles.inputField} ${styles.email} ${errors.email && styles.error}`} htmlFor="email">
+						<input
+							id="email" type="email" placeholder="Email"
+							{...register("email", { required: "Email is required" })}
+						/>
+					</label>
+					{errors.email && <p className='txtError show'>{errors.email.message}</p>}
+				</div>
+				<div className='mb-[15px]'>
+					<label className={`${styles.inputField} ${styles.password} ${errors.password && styles.error}`} htmlFor="password">
+						<input
+							id="password" placeholder="Password" type="password"
+							{...register("password", {
+								required: "Password is required",
+								minLength: { value: 6, message: "Min 6 characters" },
+							})}
+						/>
+						<span className={styles.eye}></span>
+					</label>
+					{errors.password && <p className='txtError show'>{errors.password.message}</p>}
+				</div>
+				{errors.root && <p className='txtError show text-center'>{errors.root.message}</p>}
 				<button className={styles.btnLogin} type="submit">Sign in</button>
 			</form>
 		</div>
