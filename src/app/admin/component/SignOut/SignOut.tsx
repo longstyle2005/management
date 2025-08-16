@@ -28,6 +28,7 @@ export default function SignOut (
         await signOut({
             redirect: false,
         });
+        setIsPopupAccount(false);
         router.push("/");
     };
 
