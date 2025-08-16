@@ -23,6 +23,7 @@ export default function HomePage() {
                             priority
                             className={styles.introLogo}
                         />
+                        <div className={styles.introOval}></div>
                         <p className={styles.introTtl}>Welcome to Management</p>
                     </div>
                 </div>
