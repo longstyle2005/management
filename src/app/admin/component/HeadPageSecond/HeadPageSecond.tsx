@@ -1,6 +1,6 @@
 'use client'
-import { useState } from 'react'
-import Account from '~/app/component/SignIn/SignIn'
+import { Suspense } from 'react'
+import SignOut from '~/app/admin/component/SignOut/SignOut'
 import styles from './HeadPageSecond.module.scss'
 
 export default function HeadPageSecond ( 
@@ -15,7 +15,9 @@ export default function HeadPageSecond (
                 {children}
             </div>
 			<div className={styles.headRight}>
-				<Account />
+				<Suspense>
+					<SignOut />
+				</Suspense>
 			</div>
 		</div>
 	)
