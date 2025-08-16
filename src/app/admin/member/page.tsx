@@ -36,15 +36,17 @@ export default function MemberPage () {
     }, []);
 
 	const readMemberListData = async () => {
-		await axios.get('/api/members/readMemberListFullRole')
-			.then((response : any) => {
-				setMemberDataList(response.data);
-				// console.log(response.data)
-			})
-			.catch((error : any) => {
-				console.error('Error read member data:', error);
-			})
-	}
+		setIsLoading(true);
+		try {
+			const response = await axios.get('/api/members/readMemberListFullRole');
+			setMemberDataList(response.data);
+			// console.log(response.data);
+		} catch (error) {
+			console.error('Error read member data:', error);
+		} finally {
+			setIsLoading(false);
+		}
+	};
 
 	const handleUpdateOnOffStatus = async (memberDataUpdated : any) => {
 		try {
@@ -81,18 +83,14 @@ export default function MemberPage () {
 	}
 
 	const handleMemberFilter = useCallback( async () => {
-		setIsLoading(true);
 		try {
 			const response = await axios.get('/api/members/filterMember', { params: {
 				nickname: filterNickname,
 				teamId: filterTeam === 'team_all' ? '': filterTeam,
 			}});
 			setMemberDataList(response.data);
-			// console.log(response.data);
 		} catch (error) {
 			console.error('Error fetching members:', error);
-		} finally {
-			setIsLoading(false);
 		}
 	},[filterNickname, filterTeam]);
 

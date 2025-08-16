@@ -6,10 +6,13 @@ export async function middleware(req: NextRequest) {
     const token = await getToken({req,secret: process.env.NEXTAUTH_SECRET,}) as Record<string, any> | null;
     const { pathname } = req.nextUrl;
 
-    // If not logged in
-    // if (!token && pathname.startsWith("/admin")) {
-    //     return NextResponse.redirect(new URL("/", req.url));
-    // }
+    if (!token && pathname.startsWith("/admin")) {
+        return NextResponse.redirect(new URL("/", req.url));
+    }
+
+    if (token && pathname === "/") {
+        return NextResponse.redirect(new URL("/admin", req.url));
+    }
 
     return NextResponse.next();
 }

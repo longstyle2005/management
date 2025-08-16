@@ -93,7 +93,7 @@ export default function AdminPage () {
     return (
         <DefaultLayout>
             {isLoading && <LoadingFullPage />}
-			<HeadPage title='Home' customClass='home' />
+			<HeadPage title='Statistics' customClass='home' />
             <div className={styles.wrapPage}>
                 <ProjectStatistics projectDataList={projectDataList}/>
                 <div className='inner-2'>

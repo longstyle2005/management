@@ -1,0 +1,5 @@
+{
+    "workbench.settings.useSplitJSON": true,
+    "scss.lint.unknownAtRules": "ignore",
+    "css.lint.unknownAtRules": "ignore"
+}

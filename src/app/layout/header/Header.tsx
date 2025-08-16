@@ -1,7 +1,7 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import { Suspense } from "react";
-import Account from '~/app/component/Account/Account'
+import Account from '~/app/component/SignIn/SignIn'
 import Link from 'next/link'
 import styles from './Header.module.scss';
 

@@ -1,0 +1,101 @@
+.wrap {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.col1 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 50px 50px 50px 0;
+}
+
+.signInBox {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+
+    .ttl {
+        margin-bottom: 20px;
+        font-size: 3.2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 20px;
+
+    &Logo {
+        display: block;
+        margin: 0 auto 40px auto;
+        width: 200px;
+        height: 200px;
+    }
+
+    &Ttl {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .intro {
+        &Logo {
+            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        &Ttl {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .wrap {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .col1 {
+        width: 100%;
+    }
+
+    .signInBox {
+        min-width: 300px;
+
+        .ttl {
+            display: none;
+        }
+    }
+
+    .col2 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .intro {
+        background-color: transparent;
+    }
+}

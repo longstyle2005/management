@@ -19,7 +19,7 @@ export default function ProjectStatistics (
 
 return (
     <div className={styles.wrap}>
-        <h2 className='headline3'>Project Statistics</h2>
+        {/* <h2 className='headline3'>Project Statistics</h2> */}
         <ul className={styles.statistics}>
             <li>
                 <span className={styles.ttl}>Total</span>

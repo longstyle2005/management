@@ -44,12 +44,14 @@
 
 .barList {
     width: 900px;
+    background-color: rgba(0, 162, 154, 0.3);
 
     & > li {
         position: relative;
         display: inline-block;
         display: flex;
         height: 20px;
+        transition: 1s width;
 
         &:last-child {
             margin-bottom: 0;
