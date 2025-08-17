@@ -4,8 +4,10 @@
 }
 
 .btnLogin {
+    position: relative;
     display: block;
     width: 100%;
+    min-height: 43px;
     margin: 10px 0 0 0;
     padding: 14px 18px;
     font-size: 1.5rem;
@@ -27,6 +29,21 @@
 
     &:active {
         background-color: #0f1518;
+    }
+
+    &.disable {
+        pointer-events: none;
+    }
+
+    span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        background: url(/img/common/icon_spinner.svg) no-repeat 50% 50%;
+        background-size: 30px auto;
+        transform: translate(-50%, -50%);
     }
 }
 

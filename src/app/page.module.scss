@@ -4,7 +4,7 @@
         opacity: 0.7;
     }
     50% {
-        transform: translateY(12px);
+        transform: translateY(20px);
         opacity: 1;
     }
     100% {
@@ -84,7 +84,7 @@
         margin: 0 auto 20px auto;
         width: 200px;
         height: 200px;
-        animation: animationUpDown1 6s ease infinite;
+        animation: animationUpDown1 5s ease infinite;
         transition: rotate 0.8s ease;
 
         &:hover {
@@ -99,7 +99,7 @@
         background: rgba(0, 0, 0, 0.2);
         border-radius: 50%;
         filter: blur(8px);   
-        animation: animationUpDown2 6s ease infinite;
+        animation: animationUpDown2 5s ease infinite;
         transition: transform 0.8s ease;
     }
 
