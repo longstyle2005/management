@@ -15,19 +15,28 @@ export default function SignIn () {
 	} = useForm<LoginForm>();
 	const router = useRouter();
 	const [showPassword, setShowPassword] = useState<boolean>(false);
+	const [isLoading, setIsLoading] = useState<boolean>(false);
   	const passwordValue = watch("password");
 
 	const onSubmit = async (data: LoginForm) => {
-		const res = await signIn("credentials", {
-			email: data.email,
-			password: data.password,
-			redirect: false,
-		});
-		if (res?.error) {
-			setError("root", { message: "Invalid email or password" });
-		} else {
-			router.push("/admin");
-		}
+		setIsLoading(true);
+		try {
+			const res = await signIn("credentials", {
+				email: data.email,
+				password: data.password,
+				redirect: false,
+			});
+			if (res?.error) {
+				setError("root", { message: "Invalid email or password" });
+				setIsLoading(false);
+			} else {
+				router.push("/admin");
+			}
+		} catch (err) {
+			console.error("Login failed:", err);
+			setError("root", { message: "Something went wrong. Please try again." });
+			setIsLoading(false);
+		} 
 	};
 
   	return (
@@ -57,7 +66,9 @@ export default function SignIn () {
 					{errors.password && <p className='txtError show'>{errors.password.message}</p>}
 				</div>
 				{errors.root && <p className='txtError show text-center'>{errors.root.message}</p>}
-				<button className={styles.btnLogin} type="submit">Sign in</button>
+				<button className={`${styles.btnLogin} ${isLoading && styles.disable}`} type="submit">
+					{isLoading ? <span></span> : 'Sign in'}
+				</button>
 			</form>
 		</div>
 	)
